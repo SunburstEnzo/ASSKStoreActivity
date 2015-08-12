@@ -1,6 +1,6 @@
 #ASSKStoreActivity (Objective-C Framework, Swift Tutorial)
 
-![image]()
+![image](https://github.com/SunburstEnzo/ASSKStoreActivity/blob/master/Preview.png)
 
 
 #### # First things First
