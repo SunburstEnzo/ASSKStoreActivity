@@ -7,11 +7,11 @@
 
 - Drag `"ASSKStoreActivity"` folder into your Xcode project
 - If Xcode asks if you want to use a Bridging Header then please do. In this .h we will write `#import "ASSKStoreActivity.h"`. If you are using Objective-C throughout, place the #import in the UIViewController of the button whose action will call the ActivityVC
-- This example uses `JDSActivityVC` but it should work with the standard UIActivityVC
-- This example also uses `ARSafariActivity` and `ARChromeActivity` but have nothing to do with this 🌚
+- This example uses [JDSActivityVC](https://github.com/Jasdev/JDSActivityVC) but it should work with the standard [UIActivityVC](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIActivityViewController_Class/)
+- This example also uses [ARSafariActivity](https://github.com/alexruperez/ARSafariActivity) and [ARChromeActivity](https://github.com/alexruperez/ARChromeActivity) but have nothing to do with this 🌚
 
 
-**Setup**
+**Setup**]
 
 Import related framework
 
