@@ -121,4 +121,7 @@ Basically because we set a completionHolder, we check what happened in the Activ
 
 Eventually I'll upload a simpler tutorial, but this is pretty much the exact code I use in [Say It Welsh (iOS)](https://itunes.apple.com/us/app/say-it-welsh-welsh-word-day/id985224829?ls=1&mt=8)
 
+If you have any problems let me know @SunburstEnzo
+
+Aled Samuel 2015
 
