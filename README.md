@@ -30,9 +30,9 @@ Import related framework
 
 Create these variables
 
-	var url: NSURL!	// URL to pass
+	var url: NSURL!			// URL to pass
 	var string: NSString!	// Optional URL
-	var appID: Int!	// AppID (trackID) which you will need for ASSKStoreActivity to work
+	var appID: Int!			// AppID (trackID) which you will need for ASSKStoreActivity to work
 
 
 
@@ -68,12 +68,13 @@ The example I used was in didSelectCell but any button action will do
             appID = 838931462
             
             presentActivity()
-        }
+    }
         
 Because we cannot present the SKStore modal view from the Activity itself, we need to use a UIViewController. The best one is the one we've been writing all the code so far in
         
 
 	func doneSharingHandler(activityType: String!, completed: Bool, returnedItems: [AnyObject]!, error: NSError!) {
+	
         // Return if cancelled
         if (!completed) {
             println("Not ASSKStoreActivity")
@@ -83,15 +84,12 @@ Because we cannot present the SKStore modal view from the Activity itself, we ne
         // If here, log which activity occurred
         println("Shared activity: \(activityType)")
         
-        
         if (activityType == "ASSKStoreActivity") {
             
             println("Is ASSKStoreActivity")
             
             var storeProductViewController = SKStoreProductViewController()
             storeProductViewController.delegate = self
-            
-            // url = https://itunes.apple.com/gb/app/farty-sheep-elwyn/id903327490?mt=8
             
             let parameters = [SKStoreProductParameterITunesItemIdentifier :
                 NSNumber(integer: appID)]
@@ -108,7 +106,7 @@ Because we cannot present the SKStore modal view from the Activity itself, we ne
                         
                         println("Error \(error) with User Info \(error.userInfo)")
                         
-                        //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/say-it-welsh-welsh-word-day/id985224829?ls=1&mt=8"]]
+                        //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@""]]
                     }
             })
         }
@@ -121,6 +119,6 @@ Because we cannot present the SKStore modal view from the Activity itself, we ne
 
 Basically because we set a completionHolder, we check what happened in the ActivityVC and feed it back to the ASViewController. If the "Open SKStore Modal" activity is selected, here is where we do it all, whether in reality it failed or not. If you check ASSKStoreActivity.m you will see that we hardcoded completed = YES; 
 
-Eventually I'll upload a simpler tutorial, but this is pretty much the exact code I use in Say It Welsh (iOS).
+Eventually I'll upload a simpler tutorial, but this is pretty much the exact code I use in [Say It Welsh (iOS)](https://itunes.apple.com/us/app/say-it-welsh-welsh-word-day/id985224829?ls=1&mt=8)
 
 
